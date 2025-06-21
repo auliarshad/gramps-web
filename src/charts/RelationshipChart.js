@@ -467,7 +467,7 @@ function remasterChart(
     .attr('paint-order', 'stroke')
     .attr('x', d => textPadding(d))
     .attr('y', 25 + 17 * 2)
-    .text(d => clipString(`+${d.profile.birth.date}`, boxWidthTotal(d)))
+    .text(d => clipString(`*${d.profile.birth.date}`, boxWidthTotal(d)))
 
   nodes
     .filter(d => d.profile?.death?.date && d.nodetype === 'person')
@@ -478,7 +478,7 @@ function remasterChart(
     .attr('paint-order', 'stroke')
     .attr('x', d => textPadding(d))
     .attr('y', 25 + 17 * 3)
-    .text(d => clipString(`-${d.profile.death.date}`, boxWidthTotal(d)))
+    .text(d => clipString(`+${d.profile.death.date}`, boxWidthTotal(d)))
 
   // images
   nodes
